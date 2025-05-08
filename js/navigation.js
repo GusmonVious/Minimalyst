@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mobileMenu = document.createElement('div');
         mobileMenu.className = 'mobile-menu';
         mobileMenu.innerHTML = navLinks.outerHTML;
+        console.log(mobileMenu.innerHTML);
         document.querySelector('.navbar').appendChild(mobileMenu);
         
         // Add event listeners to mobile menu links
@@ -25,8 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
       }
-      // console.log(document.querySelector('.mobile-menu'));
-      console.log("worked");
+
+      // // console.log(document.querySelector('.mobile-menu'));
+      // console.log("worked");  TESTING DUE TO ERROR 
       
       // Show mobile menu with animation
       const mobileMenu = document.querySelector('.mobile-menu');

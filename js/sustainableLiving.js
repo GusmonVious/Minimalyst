@@ -1,56 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Current year for footer
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
   // Theme toggle functionality
   const themeToggle = document.querySelector('.theme-toggle');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-  
-  // Check if user has a saved preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-    document.body.classList.add('dark-theme');
-  }
-  
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-  });
 
   // Mobile menu functionality
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   let mobileNav = document.querySelector('.mobile-nav');
   
   // Create mobile nav if it doesn't exist
-  if (!mobileNav) {
-    mobileNav = document.createElement('div');
-    mobileNav.className = 'mobile-nav';
-    mobileNav.innerHTML = `
-      <ul class="mobile-nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#minimalism">Minimalism</a></li>
-        <li><a href="#sustainable-living">Sustainable Living</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#quiz">Quiz</a></li>
-      </ul>
-    `;
-    document.body.appendChild(mobileNav);
-  }
+  // if (!mobileNav) {
+  //   mobileNav = document.createElement('div');
+  //   mobileNav.className = 'mobile-nav';
+  //   mobileNav.innerHTML = `
+  //     <ul class="mobile-nav-links">
+  //       <li><a href="#" class="active">Home</a></li>
+  //       <li><a href="#minimalism">Minimalism</a></li>
+  //       <li><a href="#sustainable-living">Sustainable Living</a></li>
+  //       <li><a href="#about">About Us</a></li>
+  //       <li><a href="#quiz">Quiz</a></li>
+  //     </ul>
+  //   `;
+  //   document.body.appendChild(mobileNav);
+  // }
   
-  mobileMenuToggle.addEventListener('click', () => {
-    mobileMenuToggle.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-  });
-  
-  // Close mobile menu when a link is clicked
-  const mobileLinks = mobileNav.querySelectorAll('a');
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenuToggle.classList.remove('active');
-      mobileNav.classList.remove('active');
-    });
-  });
+  // mobileMenuToggle.addEventListener('click', () => {
+  //   mobileMenuToggle.classList.toggle('active');
+  //   mobileNav.classList.toggle('active');
+  // });
 
   // Scroll animations
   const animateOnScroll = () => {
