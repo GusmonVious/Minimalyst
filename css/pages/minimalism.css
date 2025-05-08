@@ -578,15 +578,11 @@ body.dark-theme .btn.secondary:hover {
   .cta-content h2 {
     margin-bottom: var(--space-3);
   }
-
-  body.dark-theme .cta-content .accent {
-    color: var(--accent-light);
-  }
-
-  body.light-theme .cta-content .accent {
-    color: var(--bg-light);
-  }
   
+  body.light-theme .cta-content .accent {
+    color: var(--neutral-600);
+  }
+
   .cta-content p {
     margin-bottom: var(--space-4);
     opacity: 0.9;
