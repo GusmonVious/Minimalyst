@@ -1,0 +1,21 @@
+# Enforce Unix-style LF line endings for all text files (recommended for cross-platform)
+* text=auto eol=lf
+
+# Explicit line ending rules (optional but explicit)
+*.js   text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.ts   text eol=lf
+
+# Treat binary files as-is
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.woff binary
+*.woff2 binary
