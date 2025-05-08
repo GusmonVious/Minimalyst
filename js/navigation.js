@@ -5,16 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   mobileMenuToggle.addEventListener('click', () => {
     mobileMenuToggle.classList.toggle('active'); 
-    mobileMenuToggle.classList.add('active');
-    console.log('Added active:', mobileMenuToggle.className);
-  
-    setTimeout(() => {
-      console.log('After 100ms:', mobileMenuToggle.className);
-    }, 100);
-  
-    setTimeout(() => {
-      console.log('After 500ms:', mobileMenuToggle.className);
-    }, 500);
   
     // Toggle mobile menu
     if (mobileMenuToggle.classList.contains('active')) {
