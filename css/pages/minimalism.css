@@ -564,9 +564,8 @@ body.dark-theme .btn.secondary:hover {
     background-color: var(--accent-light);
     transition: background-color var(--transition-normal);
   }
-  
   body.dark-theme .cta {
-    background-color: var(--accent-dark);
+    background-color: var(--neutral-700);
   }
   
   .cta-content {
@@ -579,13 +578,21 @@ body.dark-theme .btn.secondary:hover {
   .cta-content h2 {
     margin-bottom: var(--space-3);
   }
+
+  body.dark-theme .cta-content .accent {
+    color: var(--accent-light);
+  }
+
+  body.light-theme .cta-content .accent {
+    color: var(--bg-light);
+  }
   
   .cta-content p {
     margin-bottom: var(--space-4);
     opacity: 0.9;
   }
   
-  .cta .accent {
+  .cta {
     color: white;
   }
   
