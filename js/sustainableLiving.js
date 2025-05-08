@@ -1,23 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Current year for footer
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
-  // Theme toggle functionality
-  const themeToggle = document.querySelector('.theme-toggle');
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-  
-  // Check if user has a saved preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-    document.body.classList.add('dark-theme');
-  }
-  
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-  });
-
   // Mobile menu functionality
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   let mobileNav = document.querySelector('.mobile-nav');
@@ -78,24 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Run animations on load and scroll
   window.addEventListener('scroll', animateOnScroll);
   window.addEventListener('load', animateOnScroll);
-  
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
 });
