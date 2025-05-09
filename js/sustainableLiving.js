@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Theme toggle functionality
-  const themeToggle = document.querySelector('.theme-toggle');
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  // // Theme toggle functionality
+  // const themeToggle = document.querySelector('.theme-toggle');
+  // const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-  // Mobile menu functionality
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  let mobileNav = document.querySelector('.mobile-nav');
+  // // Mobile menu functionality
+  // const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  // let mobileNav = document.querySelector('.mobile-nav');
   
   // Create mobile nav if it doesn't exist
   // if (!mobileNav) {
