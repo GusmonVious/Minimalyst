@@ -43,33 +43,6 @@ body.dark-theme .hero-bg-image {
 }
 
 /* Button Styles */
-.btn {
-  display: inline-block;
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-full);
-  text-align: center;
-  font-weight: var(--font-semibold);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  text-decoration: none;
-}
-
-.btn.primary {
-  background-color: var(--accent-light);
-  color: white;
-}
-
-.btn.primary:hover {
-  background-color: var(--text-light);
-}
-
-body.dark-theme .btn.primary {
-  background-color: var(--accent-dark); 
-}
-
-body.dark-theme .btn.primary:hover {
-  background-color: var(--text-dark);
-}
 
 /* Section Styles */
 section {

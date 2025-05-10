@@ -493,3 +493,50 @@ body.dark-theme .footer-newsletter input:focus {
 body.dark-theme .footer-bottom {
   border-color: var(--neutral-700);
 }
+
+.btn {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  text-align: center;
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: var(--accent-light);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: var(--text-light);
+}
+
+body.dark-theme .btn.primary {
+  background-color: var(--accent-dark); 
+}
+
+body.dark-theme .btn.primary:hover {
+  background-color: var(--text-dark);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid var(--accent-light);
+  color: var(--accent-light);
+}
+
+body.dark-theme .btn.secondary {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+.btn.secondary:hover {
+  background-color: rgba(110, 139, 93, 0.1);
+}
+
+body.dark-theme .btn.secondary:hover {
+  background-color: rgba(163, 177, 138, 0.1);
+}
