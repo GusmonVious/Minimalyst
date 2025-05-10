@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu functionality
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const logo = document.querySelector('.logo');
   
   mobileMenuToggle.addEventListener('click', () => {
     mobileMenuToggle.classList.toggle('active'); 
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  
+
   // Animate elements on scroll
   const observerOptions = {
     root: null,
