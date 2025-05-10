@@ -692,7 +692,7 @@ body.dark-theme .btn.secondary:hover {
   
   .footer-newsletter input {
     flex: 1;
-    padding: 0.5rem 1rem;
+    padding: var(--space-1) var(--space-2);
     border: 1px solid var(--neutral-300);
     border-right: none;
     border-radius: var(--radius-md) 0 0 var(--radius-md);

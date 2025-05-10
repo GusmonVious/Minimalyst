@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
   // Scroll animations
   const animateOnScroll = () => {
     const elements = document.querySelectorAll('.card, .practice-item, .stat-item');
@@ -26,24 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Run animations on load and scroll
   window.addEventListener('scroll', animateOnScroll);
   window.addEventListener('load', animateOnScroll);
-  
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
 });
