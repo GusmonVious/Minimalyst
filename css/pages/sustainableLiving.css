@@ -3,38 +3,43 @@
 /* Hero Section */
 .hero {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  background-color: var(--bg-light);
-  transition: background-color var(--transition-normal);
+  overflow: hidden;
 }
 
-body.dark-theme .hero {
-  background-color: var(--bg-dark);
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+body:not(.dark-theme) .hero-bg-image {
+  content: url('../../images/lightMinimalism.jpg');
+}
+
+body.dark-theme .hero-bg-image {
+  content: url('../../images/darkMinimalism.png');
 }
 
 .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   text-align: center;
-}
-
-.hero h1 {
-  font-size: var(--font-size-4xl);
-  margin-bottom: var(--space-3);
-}
-
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: var(--font-size-5xl);
-  }
-}
-
-.hero-subtitle {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--space-5);
-  opacity: 0.9;
+  padding: 20px;
 }
 
 /* Button Styles */
@@ -59,7 +64,7 @@ body.dark-theme .hero {
 }
 
 body.dark-theme .btn.primary {
-  background-color: var(--accent-dark);
+  background-color: var(--accent-dark); 
 }
 
 body.dark-theme .btn.primary:hover {
