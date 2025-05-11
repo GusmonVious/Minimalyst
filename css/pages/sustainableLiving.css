@@ -143,6 +143,18 @@ body.dark-theme .card {
   background-color: var(--accent-light);
   margin-bottom: var(--space-3);
   transition: background-color var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.card-icon i {
+  font-size: var(--font-size-2xl); /* Try 32px or larger if you want it bolder */
+  color: var(--extra-blue);
+}
+
+body.dark-theme div.card-icon i {
+  color: var(--neutral-100);
 }
 
 body.dark-theme .card-icon {
@@ -208,6 +220,9 @@ body.dark-theme .practice-item:hover {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: background-color var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body.dark-theme .stat-item {
@@ -229,7 +244,7 @@ body.dark-theme .stat-number {
 
 /* CTA Section */
 .cta-section {
-  background-color: var(--neutral-100);
+  background-color: var(--accent-light);
   transition: background-color var(--transition-normal);
 }
 
@@ -241,12 +256,23 @@ body.dark-theme .cta-section {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  color: white;
 }
 
 .cta-content h2 {
   margin-bottom: var(--space-3);
 }
 
+body.light-theme .cta-content .accent {
+  color: var(--neutral-600);
+}
+
 .cta-content p {
   margin-bottom: var(--space-4);
+  opacity: 0.9;
+}
+
+.btn.primary {
+  background-color: var(--neutral-600);
+  color: white;
 }
