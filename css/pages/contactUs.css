@@ -1,36 +1,115 @@
 /* Import variables */
 @import url("../variablesConstant.css");
 
-/* Hero Section */
-.hero {
-    padding: calc(80px + var(--space-12)) 0 var(--space-12);
-    background-color: var(--neutral-100);
+body.dark-theme .accent {
+    color: var(--accent-dark);
+  }
+  
+  .section-label {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-1);
+    color: var(--accent-light);
+    transition: color var(--transition-normal);
+  }
+  
+  body.dark-theme .section-label {
+    color: var(--accent-dark);
+  }
+  
+  /* Buttons */
+  
+  .buttonsContainer {
+    display: flex;
+    gap: var(--space-2);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem var(--space-3);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-semibold);
+    border-radius: var(--radius-md);
+    cursor: pointer;
     text-align: center;
-}
-
-.hero-content {
+    transition: all var(--transition-fast);
+    border: none;
+    outline: none;
+  }
+    
+/*   Hero Section   */
+.hero {
+    /* padding: calc(80px + var(--space-10)) 0 var(--space-10); */
+    padding: 200px 0 100px 0;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(
+      circle at center,
+      var(--accent-dark) 0%,
+      transparent 70%
+    );
+  }
+  
+  body.dark-theme .hero {
+    /* background: radial-gradient(
+      circle at center,
+      var(--accent-light) 0%,
+      transparent 70%
+    ); */
+    background: radial-gradient(
+      circle at center,
+      var(--neutral-800) 0%,
+      transparent 70%
+    );
+  }
+  
+  .hero-content {
+    text-align: center;
     max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--space-4);
-}
-
-@media (min-width: 768px) {
-    .hero h1 {
-        font-size: var(--font-size-5xl);
-    }
-}
-
-.subtitle {
+    margin: 0 auto var(--space-8);
+    position: relative;
+    z-index: 2;
+    background: transparent;
+  }
+  
+  .hero h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-3);
+    letter-spacing: -0.02em;
+  }
+  
+  .hero-subtitle {
     font-size: var(--font-size-xl);
-    color: var(--neutral-700);
+    color: var(--neutral-600);
     max-width: 600px;
-    margin: 0 auto;
-}
-
+    margin: 0 auto var(--space-6);
+  }
+  
+  body.dark-theme .hero-subtitle {
+    color: var(--neutral-400);
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
 /* Mission Section */
 .mission {
     padding: var(--space-12) 0;
@@ -73,6 +152,10 @@
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
+body.dark-theme .value-item {
+    background-color: rgba(31, 41, 55, 0.8);
+  }
+
 .value-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
@@ -104,6 +187,10 @@
     padding: var(--space-12) 0;
     background-color: var(--neutral-100);
 }
+
+body.dark-theme .team {
+    background-color: rgba(31, 41, 55, 0.8);
+  }
 
 .section-header {
     text-align: center;
@@ -146,6 +233,10 @@
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
+
+body.dark-theme .team-member {
+    background-color: var(--extra-blue);
+  }
 
 .team-member:hover {
     transform: translateY(-5px);
@@ -194,28 +285,6 @@
     margin-bottom: var(--space-3);
     font-size: var(--font-size-base);
     opacity: 0.9;
-}
-
-.member-socials {
-    display: flex;
-    gap: var(--space-2);
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--neutral-100);
-    color: var(--text-light);
-    transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-
-.social-link:hover {
-    background-color: var(--accent-light);
-    color: white;
 }
 
 /* Contact Section */
