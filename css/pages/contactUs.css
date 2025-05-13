@@ -136,6 +136,10 @@ body.dark-theme .mission-text p {
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
+body.dark-theme .value-item {
+    background-color: var(--extra-blue);
+}
+
 .value-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
@@ -166,6 +170,10 @@ body.dark-theme .mission-text p {
 .team {
     padding: var(--space-12) 0;
     background-color: var(--neutral-100);
+}
+
+body.dark-theme .team {
+    background-color: var(--extra-blue);
 }
 
 .section-header {
@@ -208,6 +216,10 @@ body.dark-theme .mission-text p {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+body.dark-theme .team-member {
+    background-color: var(--accent-blue);
 }
 
 .team-member:hover {
