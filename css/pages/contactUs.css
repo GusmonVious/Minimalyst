@@ -20,7 +20,7 @@ body.dark-theme .accent {
   }
   
   /* Buttons */
-  
+
   .buttonsContainer {
     display: flex;
     gap: var(--space-2);
@@ -52,36 +52,36 @@ body.dark-theme .accent {
     );
   }
   
-  body.dark-theme .hero {
-    /* background: radial-gradient(
-      circle at center,
-      var(--accent-light) 0%,
-      transparent 70%
-    ); */
+body.dark-theme .hero {
+/* background: radial-gradient(
+    circle at center,
+    var(--accent-light) 0%,
+    transparent 70%
+); */
     background: radial-gradient(
-      circle at center,
-      var(--neutral-800) 0%,
-      transparent 70%
+        circle at center,
+        var(--neutral-800) 0%,
+        transparent 70%
     );
-  }
-  
-  .hero-content {
-    text-align: center;
+}
+
+.hero-content {
+text-align: center;
     max-width: 800px;
     margin: 0 auto var(--space-8);
     position: relative;
     z-index: 2;
     background: transparent;
-  }
-  
-  .hero h1 {
+}
+
+.hero h1 {
     font-size: var(--font-size-5xl);
     font-weight: var(--font-semibold);
     margin-bottom: var(--space-3);
     letter-spacing: -0.02em;
-  }
-  
-  .hero-subtitle {
+}
+
+.hero-subtitle {
     font-size: var(--font-size-xl);
     color: var(--neutral-600);
     max-width: 600px;
@@ -136,10 +136,6 @@ body.dark-theme .mission-text p {
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-body.dark-theme .value-item {
-    background-color: var(--accent-blue);
-}
-
 .value-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
@@ -170,10 +166,6 @@ body.dark-theme .value-item {
 .team {
     padding: var(--space-12) 0;
     background-color: var(--neutral-100);
-}
-
-body.dark-theme .team {
-    background-color: var(--accent-blue);
 }
 
 .section-header {
@@ -216,10 +208,6 @@ body.dark-theme .team {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-body.dark-theme .team-member {
-    background-color: var(--extra-blue);
 }
 
 .team-member:hover {

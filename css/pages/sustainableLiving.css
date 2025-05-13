@@ -171,13 +171,13 @@ body.dark-theme .card-icon {
 .practice-item {
   padding: var(--space-4);
   border-left: 3px solid var(--accent-light);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, );
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   transition: all var(--transition-normal);
 }
 
 body.dark-theme .practice-item {
-  border-left-color: var(--accent-dark);
+  border-left-color: var(--accent-light);
   background-color: rgba(255, 255, 255, 0.05);
 }
 
