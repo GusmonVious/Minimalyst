@@ -1,35 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Hero Grid Animation
-  const heroGrid = document.querySelector('.hero-grid');
-  if (heroGrid) {
-    // Create 400 grid items (20x20 grid)
-    for (let i = 0; i < 400; i++) {
-      const gridItem = document.createElement('div');
-      gridItem.className = 'grid-item';
-      
-      // Calculate distance from center
-      const row = Math.floor(i / 20);
-      const col = i % 20;
-      const centerRow = 10;
-      const centerCol = 10;
-      const distance = Math.sqrt(
-        Math.pow(row - centerRow, 2) + 
-        Math.pow(col - centerCol, 2)
-      );
-      
-      // Set animation delay based on distance from center
-      const delay = distance * 0.05;
-      gridItem.style.animationDelay = `${delay}s`;
-      
-      // Set opacity based on distance from center
-      const maxDistance = Math.sqrt(Math.pow(10, 2) + Math.pow(10, 2));
-      const opacity = 1 - (distance / maxDistance);
-      gridItem.style.opacity = opacity * 0.1;
-      
-      heroGrid.appendChild(gridItem);
-    }
-  }
-
   // FAQ Accordion Functionality
   const faqQuestions = document.querySelectorAll('.faq-question');
   
