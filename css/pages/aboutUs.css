@@ -415,8 +415,24 @@ body.dark-theme .slide-nav {
     left: var(--space-2);
 }
 
+.slide-nav.prev i {
+    color: var(--text-light);
+}
+
+body.dark-theme .slide-nav.prev i {
+    color: var(--text-dark);
+}
+
 .slide-nav.next {
     right: var(--space-2);
+}
+
+.slide-nav.next i {
+    color: var(--text-light);
+}
+
+body.dark-theme .slide-nav.next i {
+    color: var(--text-dark);
 }
 
 .slide-nav img {
