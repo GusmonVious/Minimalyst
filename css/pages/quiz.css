@@ -1,0 +1,211 @@
+/* Import variables */
+@import '../variablesConstant.css';
+
+/* Rest of existing styles... */
+
+/* Quiz-specific styles */
+.quiz-hero {
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--neutral-100) 100%);
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+body.dark-theme .quiz-hero {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--neutral-900) 100%);
+}
+
+.quiz-intro {
+    padding: var(--space-12) 0;
+    background-color: var(--bg-light);
+}
+
+body.dark-theme .quiz-intro {
+    background-color: var(--bg-dark);
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quiz-features {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-6) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.quiz-features li {
+    padding: var(--space-4);
+    background-color: var(--neutral-200);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-semibold);
+}
+
+body.dark-theme .quiz-features li {
+    background-color: var(--neutral-800);
+}
+
+.quiz-section {
+    padding: var(--space-12) 0;
+    background-color: var(--neutral-100);
+}
+
+body.dark-theme .quiz-section {
+    background-color: var(--neutral-900);
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-6);
+    background-color: var(--bg-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+body.dark-theme .quiz-container {
+    background-color: var(--neutral-800);
+}
+
+/* Progress Bar */
+.progress-bar {
+    margin-bottom: var(--space-6);
+}
+
+.progress-track {
+    position: relative;
+    padding: var(--space-4) 0;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    background-color: var(--accent-light);
+    transition: width var(--transition-normal);
+}
+
+body.dark-theme .progress-fill {
+    background-color: var(--accent-dark);
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--neutral-200);
+    transform: translateY(-50%);
+}
+
+body.dark-theme .progress-steps::before {
+    background-color: var(--neutral-700);
+}
+
+.step {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--neutral-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-semibold);
+    position: relative;
+    z-index: 1;
+    transition: all var(--transition-normal);
+}
+
+body.dark-theme .step {
+    background-color: var(--neutral-700);
+}
+
+.step.active {
+    background-color: var(--accent-light);
+    color: white;
+}
+
+body.dark-theme .step.active {
+    background-color: var(--accent-dark);
+}
+
+.step.completed {
+    background-color: var(--accent-light);
+    color: white;
+}
+
+body.dark-theme .step.completed {
+    background-color: var(--accent-dark);
+}
+
+.question-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-6);
+}
+
+.recommendations {
+    margin-top: var(--space-6);
+    padding: var(--space-4);
+    background-color: var(--neutral-100);
+    border-radius: var(--radius-md);
+    text-align: left;
+}
+
+body.dark-theme .recommendations {
+    background-color: var(--neutral-700);
+}
+
+.recommendations h3 {
+    color: var(--accent-light);
+    margin-bottom: var(--space-3);
+}
+
+body.dark-theme .recommendations h3 {
+    color: var(--accent-dark);
+}
+
+.recommendations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommendations li {
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-4);
+    position: relative;
+}
+
+.recommendations li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+}
+
+body.dark-theme .recommendations li::before {
+    color: var(--accent-dark);
+}
