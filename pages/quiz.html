@@ -1,151 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimalyst - How Minimalistic Are You?</title>
-    <link rel="icon" type="image/png" href="../images/logoWhite.png" id="favicon"/>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/pages/quiz.css"/>
-    <link relg="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalism Quiz - Minimalyst</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/pages/quiz.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
 </head>
 <body class="light-theme">
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="../images/logoBlack.png" alt="Minimalyst Logo" class="logo-img light-logo" />
-                    <img src="../images/logoWhite.png" alt="Minimalyst Logo" class="logo-img dark-logo" />
-                    <span>Minimalyst</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="minimalism.html">Minimalism</a></li>
-                    <li><a href="sustainableLiving.html">Sustainable Living</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#" class="active">Quiz</a></li>
-                </ul>
-                <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <span class="theme-toggle-icon"></span>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+            <img src="../images/logoBlack.png" alt="Minimalyst Logo" class="logo-img light-logo" />
+            <img src="../images/logoWhite.png" alt="Minimalyst Logo" class="logo-img dark-logo" />
+            <span>Minimalyst</span>
         </div>
-    </header>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="minimalism.html">Minimalism</a></li>
+          <li><a href="sustainableLiving.html">Sustainable Living</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="#" class="active">Quiz</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon"></span>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="hero quiz-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>How <span class="accent">Minimalistic</span> Are You?</h1>
-                    <p class="subtitle">Discover your minimalism score and get personalized insights to help you on your journey</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="quiz-intro">
-            <div class="container">
-                <div class="intro-content">
-                    <h2>About the <span class="accent">Quiz</span></h2>
-                    <p>This quiz is designed to help you understand your current relationship with minimalism and identify areas where you can simplify your life. Through a series of thoughtful questions, we'll explore your habits, preferences, and lifestyle choices.</p>
-                    <p>Your results will include:</p>
-                    <ul class="quiz-features">
-                        <li>Your personal minimalism score</li>
-                        <li>Tailored recommendations for improvement</li>
-                        <li>Suggested resources from our website</li>
-                        <li>Practical next steps for your journey</li>
-                    </ul>
-                    <button id="startQuiz" class="btn primary">Take the Quiz</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="quizSection" class="quiz-section" style="display: none;">
-            <div class="container">
-                <div class="quiz-container">
-                    <div class="progress-bar">
-                        <div class="progress-track">
-                            <div class="progress-fill"></div>
-                            <div class="progress-steps">
-                                <div class="step active">1</div>
-                                <div class="step">2</div>
-                                <div class="step">3</div>
-                                <div class="step">4</div>
-                                <div class="step">5</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="questionContainer" class="question-container">
-                        <!-- Questions will be inserted here by JavaScript -->
-                    </div>
-                    <div class="navigation-buttons">
-                        <button id="prevQuestion" class="btn secondary" style="display: none;">Previous</button>
-                        <button id="nextQuestion" class="btn primary" style="display: none;">Next</button>
-                    </div>
-                    <div id="resultContainer" class="result-container" style="display: none;">
-                        <h2>Your Results</h2>
-                        <div class="score-circle">
-                            <svg class="progress-ring" width="200" height="200">
-                                <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90" />
-                                <circle class="progress-ring-circle" cx="100" cy="100" r="90" />
-                            </svg>
-                            <div class="score-text">
-                                <span id="scorePercentage">0</span>%
-                                <div class="score-label">Minimalistic</div>
-                            </div>
-                        </div>
-                        <p id="resultMessage"></p>
-                        <div id="recommendations" class="recommendations"></div>
-                        <button id="retakeQuiz" class="btn primary">Take Quiz Again</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Minimalyst</h3>
-                    <p>Guiding you toward a simpler, more intentional lifestyle through minimalism and sustainable practices.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Explore</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="minimalism.html">Minimalism</a></li>
-                        <li><a href="sustainableLiving.html">Sustainable Living</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Quiz</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <p>Join our newsletter for tips and updates on minimalist living.</p>
-                    <div class="footer-newsletter">
-                        <input type="email" placeholder="Your email">
-                        <button class="btn primary">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© <span id="current-year">2025</span> Minimalyst. All rights reserved.</p>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="section-label">Interactive Quiz</span>
+          <h1>Discover Your <span class="accent">Minimalism</span> Score</h1>
+          <p>Take our comprehensive quiz to understand where you are on your minimalism journey and get personalized recommendations for your next steps.</p>
+          <button id="startQuiz" class="btn primary">Start Quiz</button>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="../js/navigation.js"></script>
-    <script src="../js/theme.js"></script>
-    <script src="../js/quiz.js"></script>
+    <section id="quizSection" class="quiz-section hidden">
+      <div class="container">
+        <div class="quiz-container">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+            <div class="checkpoints">
+              <div class="checkpoint active" data-section="Possessions"></div>
+              <div class="checkpoint" data-section="Digital"></div>
+              <div class="checkpoint" data-section="Lifestyle"></div>
+              <div class="checkpoint" data-section="Results"></div>
+            </div>
+          </div>
+
+          <div class="question-container">
+            <!-- Questions will be inserted here by JavaScript -->
+          </div>
+
+          <div class="quiz-navigation">
+            <button class="btn secondary" id="prevQuestion" disabled>Back</button>
+            <button class="btn primary" id="nextQuestion" disabled>Next</button>
+          </div>
+        </div>
+
+        <div id="results" class="results-container hidden">
+          <!-- Results will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Minimalyst</h3>
+          <p>Guiding you toward a simpler, more intentional lifestyle through minimalism and sustainable practices.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="minimalism.html">Minimalism</a></li>
+            <li><a href="sustainableLiving.html">Sustainable Living</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#" class="active">Quiz</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <p>Join our newsletter for tips and updates on minimalist living.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Your email">
+            <button class="btn primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2025</span> Minimalyst. All rights reserved. Created by EDUflow team.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/quiz.js"></script>
 </body>
 </html>
