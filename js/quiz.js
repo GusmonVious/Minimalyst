@@ -141,7 +141,7 @@ const quizData = {
     {
       range: [0, 20],
       label: "Consumption Explorer",
-      character: "images/character-0.png",
+      // character: "images/character-0.png",
       generalFeedback: "You're at the beginning of your minimalism journey. Your lifestyle currently embraces abundance and variety, but there's potential to discover the benefits of intentional simplicity.",
       recommendations: [
         {
@@ -164,7 +164,7 @@ const quizData = {
     {
       range: [21, 40],
       label: "Minimalism Curious",
-      character: "images/character-20.png",
+      // character: "images/character-20.png",
       generalFeedback: "You're becoming aware of minimalism principles and have taken some initial steps. You're starting to recognize the weight of excess belongings and commitments.",
       recommendations: [
         {
@@ -187,7 +187,7 @@ const quizData = {
     {
       range: [41, 60],
       label: "Balanced Minimalist",
-      character: "images/character-40.png",
+      // character: "images/character-40.png",
       generalFeedback: "You've embraced many minimalist principles while maintaining balance. You understand the value of intentionality but aren't extreme in your approach.",
       recommendations: [
         {
@@ -210,7 +210,7 @@ const quizData = {
     {
       range: [61, 80],
       label: "Intentional Minimalist",
-      character: "images/character-60.png",
+      // character: "images/character-60.png",
       generalFeedback: "You've embraced minimalism in most areas of your life. You make thoughtful choices about possessions, time, and digital consumption.",
       recommendations: [
         {
@@ -233,7 +233,7 @@ const quizData = {
     {
       range: [81, 100],
       label: "Minimalism Master",
-      character: "images/character-80.png",
+      // character: "images/character-80.png",
       generalFeedback: "You exemplify minimalist principles across all aspects of life. Your intentional approach to possessions, time, and focus creates space for what truly matters to you.",
       recommendations: [
         {
@@ -276,7 +276,7 @@ const retakeButton = document.getElementById('retakeQuiz');
 // Start quiz
 startButton.addEventListener('click', () => {
   quizSection.classList.remove('hidden');
-  startButton.parentElement.style.display = 'none';
+  document.querySelector('.hero').style.display = 'none';
   displayQuestion();
 });
 
@@ -396,9 +396,6 @@ function showResults() {
           <span class="score-number">0</span>%
         </div>
         <h2>${resultTier.label}</h2>
-      </div>
-      <div class="character-art">
-        <img src="${resultTier.character}" alt="Character representation of your minimalism level">
       </div>
       <div class="general-feedback">
         <p>${resultTier.generalFeedback}</p>

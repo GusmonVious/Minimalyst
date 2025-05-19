@@ -3,9 +3,9 @@
 
 body.dark-theme .accent {
     color: var(--accent-dark);
-  }
+}
   
-  .section-label {
+.section-label {
     display: inline-block;
     font-size: var(--font-size-sm);
     text-transform: uppercase;
@@ -13,20 +13,20 @@ body.dark-theme .accent {
     margin-bottom: var(--space-1);
     color: var(--accent-light);
     transition: color var(--transition-normal);
-  }
-  
-  body.dark-theme .section-label {
-    color: var(--accent-dark);
-  }
-  
-  /* Buttons */
+}
 
-  .buttonsContainer {
+body.dark-theme .section-label {
+    color: var(--accent-dark);
+}
+
+/* Buttons */
+
+.buttonsContainer {
     display: flex;
     gap: var(--space-2);
-  }
-  
-  .btn {
+}
+
+.btn {
     display: inline-block;
     padding: 0.75rem var(--space-3);
     font-size: var(--font-size-base);
@@ -37,7 +37,7 @@ body.dark-theme .accent {
     transition: all var(--transition-fast);
     border: none;
     outline: none;
-  }
+}
     
 /*   Hero Section   */
 .hero {
@@ -122,6 +122,17 @@ text-align: center;
 body.dark-theme .mission-text p {
     color: var(--text-dark);
 } */
+
+.aboutUsLogo {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.aboutUsLogo img {
+    width: 40px;
+    height: 100%;
+    margin-top: var(--space-1);
+}
 
 .mission-values {
     display: flex;

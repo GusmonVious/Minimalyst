@@ -40,6 +40,7 @@ body.dark-theme .section-label {
   min-height: 60vh;
   opacity: 1;
   transition: opacity var(--transition-normal);
+  margin-top: var(--space-4);
 }
 
 .quiz-section.hidden {

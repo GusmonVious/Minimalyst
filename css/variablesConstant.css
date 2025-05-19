@@ -422,6 +422,11 @@ body.dark-theme .footer {
   margin-bottom: var(--space-6);
 }
 
+.footerLogoHolder {
+  display: flex;
+  gap: var(--space-1);
+}
+
 @media (min-width: 768px) {
   .footer-content {
     grid-template-columns: repeat(3, 1fr);
