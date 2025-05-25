@@ -523,6 +523,10 @@ body.dark-theme .contact {
     box-shadow: var(--shadow-md);
 }
 
+.contact-info h3 {
+    padding: var(--space-1) 0;
+}
+
 body.dark-theme .contact-info {
     background-color: var(--accent-blue);
 }
