@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Next slide button
         if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
+            nextBtn.addEventListener('click', () => {  
                 clearInterval(slideInterval);
                 currentSlide = (currentSlide + 1) % slides.length;
                 showSlide(currentSlide);
